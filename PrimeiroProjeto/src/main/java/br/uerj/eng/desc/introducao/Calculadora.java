@@ -7,7 +7,11 @@ public class Calculadora {
         System.out.println(numero1 * numero2);
     }
     public double divide(double numero1, double numero2){
-        return numero1/numero2;
+        if (numero2 != 0) {
+            return numero1/numero2;
+        }else{
+            return 0;
+        }
     }
     public int divideInt(double numero1, double numero2){
         return (int)(numero1/numero2);

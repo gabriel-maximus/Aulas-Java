@@ -13,9 +13,10 @@ public class Teste {
         //Teste dos métodos
         Calculadora calc = new Calculadora();
         calc.multiplica(3, 4);
-        double divisao = calc.divide(9,2);
+        double divisao = calc.divide(8,2);
         System.out.println(divisao);
         int divisaoInt = calc.divideInt(7,3);
         System.out.println(divisaoInt);
+        
     }
-}
+}   
