@@ -2,8 +2,10 @@ br\uerj\eng\desc\introducao\Funcionario.class
 br\uerj\eng\desc\introducao\FuncionarioDois.class
 br\uerj\eng\desc\introducao\Professor.class
 br\uerj\eng\desc\introducao\Estudante.class
+br\uerj\eng\desc\introducao\CarroTeste.class
 br\uerj\eng\desc\introducao\FuncionarioTeste.class
 br\uerj\eng\desc\introducao\Calculadora.class
 br\uerj\eng\desc\introducao\Teste.class
 br\uerj\eng\desc\introducao\FuncionarioDoisTeste.class
 br\uerj\eng\desc\introducao\ProfessorTeste.class
+br\uerj\eng\desc\introducao\Carro.class
