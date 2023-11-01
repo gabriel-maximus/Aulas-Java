@@ -50,8 +50,12 @@ public class Seminario {
         System.out.println("Professor responsável: "+this.professor.getNome());
         System.out.println("Local: "+this.local.getNumeroAndar()+"º andar Auditório "+this.local.getNumeroAuditorio());
         System.out.println("Alunos inscritos: ");
-        for(int i=0;i<alunos.length;i++){
-            System.out.println("Nome: "+alunos[i].getNome()+" Idade: "+alunos[i].getIdade());
+        if(this.alunos.length != 0 && this.alunos != null){
+            for(int i=0;i<alunos.length;i++){
+                System.out.println("Nome: "+alunos[i].getNome()+" Idade: "+alunos[i].getIdade());
+            }
+        }else{
+            System.out.println("Não possui alunos inscritos");
         }
     }
 }

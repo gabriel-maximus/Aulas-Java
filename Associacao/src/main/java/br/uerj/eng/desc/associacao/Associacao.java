@@ -17,6 +17,20 @@ public class Associacao {
         
         Seminario seminario1 = new Seminario("Funcoes",professor1,seminarioAluno,local1);
         
+        aluno1.setSeminario(seminario1);
+        aluno2.setSeminario(seminario1);
+        
+        Seminario[] seminarios = {seminario1};
+        professor1.setSeminarios(seminarios);
+        
         seminario1.printInfo();
+        System.out.println("-------------");
+        aluno1.printInfo();
+        System.out.println("-------------");
+        aluno3.printInfo();
+        System.out.println("-------------");
+        professor1.printInfo();
+        System.out.println("-------------");
+        professor2.printInfo();
     }
 }
