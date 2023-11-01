@@ -16,14 +16,17 @@ public class Associacao {
         Aluno[] seminarioAluno = {aluno1, aluno2};
         
         Seminario seminario1 = new Seminario("Funcoes",professor1,seminarioAluno,local1);
+        Seminario seminario2 = new Seminario("Programação", professor1, local2);
         
         aluno1.setSeminario(seminario1);
         aluno2.setSeminario(seminario1);
         
-        Seminario[] seminarios = {seminario1};
+        Seminario[] seminarios = {seminario1, seminario2};
         professor1.setSeminarios(seminarios);
         
         seminario1.printInfo();
+        System.out.println("-------------");
+        seminario2.printInfo();
         System.out.println("-------------");
         aluno1.printInfo();
         System.out.println("-------------");
@@ -32,5 +35,6 @@ public class Associacao {
         professor1.printInfo();
         System.out.println("-------------");
         professor2.printInfo();
+        
     }
 }

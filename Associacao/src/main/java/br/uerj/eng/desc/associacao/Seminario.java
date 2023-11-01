@@ -13,6 +13,12 @@ public class Seminario {
         this.local = local;
     }
 
+    public Seminario(String titulo, Professor professor, Local local) {
+        this.titulo = titulo;
+        this.professor = professor;
+        this.local = local;
+    }
+    
     public String getTitulo() {
         return titulo;
     }
@@ -50,7 +56,7 @@ public class Seminario {
         System.out.println("Professor responsável: "+this.professor.getNome());
         System.out.println("Local: "+this.local.getNumeroAndar()+"º andar Auditório "+this.local.getNumeroAuditorio());
         System.out.println("Alunos inscritos: ");
-        if(this.alunos.length != 0 && this.alunos != null){
+        if(this.alunos != null && this.alunos.length != 0){
             for(int i=0;i<alunos.length;i++){
                 System.out.println("Nome: "+alunos[i].getNome()+" Idade: "+alunos[i].getIdade());
             }
