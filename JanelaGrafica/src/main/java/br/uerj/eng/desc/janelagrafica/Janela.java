@@ -5,6 +5,7 @@ import javax.swing.JFrame;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 
 public class Janela extends JFrame implements ActionListener{
@@ -17,7 +18,7 @@ public class Janela extends JFrame implements ActionListener{
         
         if(e.getSource()==jb){
             //Exibir uma mensagem na tela com o clique do botão
-            JOptionPane.showMessageDialog(null,"Funcionou!!!");
+            JOptionPane.showMessageDialog(null,caixa.getText());
         }
         if(e.getSource()==jb2){
             System.exit(0);
@@ -25,6 +26,8 @@ public class Janela extends JFrame implements ActionListener{
     }
     
     JLabel legenda = new JLabel("Texto da Label");
+    
+    JTextField caixa = new JTextField("");
     
     public Janela(){
         //JFrame jf = new JFrame(); //cria a janela
@@ -41,7 +44,7 @@ public class Janela extends JFrame implements ActionListener{
         add(jb); //adicionar o botão na janela
         jb.addActionListener(this); // adicionar ação ao botão
         
-        //Criação do Segundo Botão;
+        //Criação do Segundo Botão
         jb2.setBounds(400,300,100,60);
         add(jb2);
         jb2.addActionListener(this);
@@ -52,5 +55,9 @@ public class Janela extends JFrame implements ActionListener{
         legenda.setHorizontalAlignment(SwingConstants.CENTER); //centralizar o texto
         add(legenda); //adicionar a label
         
+        //Criação de uma caixa de texto
+        caixa.setBounds(100,100,400,50);
+        add(caixa);
+        caixa.setText("Inicializando com um texto!");
     }
 }
