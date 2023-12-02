@@ -3,7 +3,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.SwingConstants;
 
 public class Janela extends JFrame implements ActionListener{
     
@@ -21,6 +23,8 @@ public class Janela extends JFrame implements ActionListener{
             System.exit(0);
         }
     }
+    
+    JLabel legenda = new JLabel("Texto da Label");
     
     public Janela(){
         //JFrame jf = new JFrame(); //cria a janela
@@ -41,5 +45,12 @@ public class Janela extends JFrame implements ActionListener{
         jb2.setBounds(400,300,100,60);
         add(jb2);
         jb2.addActionListener(this);
+        
+        //Criação de uma Label
+        legenda.setBounds(0,0,200,60);//posicionar a label
+        legenda.setText("Texto da Label 2"); //mudar o texto da label em tempo de execução
+        legenda.setHorizontalAlignment(SwingConstants.CENTER); //centralizar o texto
+        add(legenda); //adicionar a label
+        
     }
 }
