@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 public class JanelaCalculadora extends JFrame implements ActionListener{
     
@@ -28,6 +29,8 @@ public class JanelaCalculadora extends JFrame implements ActionListener{
     JButton b7 = new JButton("7");
     JButton b8 = new JButton("8");
     JButton b9 = new JButton("9");
+    
+    JTextField visor = new JTextField("");
     
     public JanelaCalculadora(){
         
@@ -88,7 +91,10 @@ public class JanelaCalculadora extends JFrame implements ActionListener{
         b9.setBounds(410,240,100,60); //seta a posição do componente (x,y,largura,altura)
         add(b9); //adicionar o botão na janela
         b9.addActionListener(this);
-                
-              
+        
+        //Criando caixa de Texto
+        visor.setBounds(180,100,340,50);
+        add(visor);
+        
     }   
 }
