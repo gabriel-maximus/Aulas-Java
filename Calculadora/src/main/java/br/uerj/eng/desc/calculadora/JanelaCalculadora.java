@@ -11,7 +11,39 @@ public class JanelaCalculadora extends JFrame implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e){
-        
+        if(e.getSource()==b0){
+            visor.setText(visor.getText()+0);
+        }
+        if(e.getSource()==bponto){
+            visor.setText(visor.getText()+".");
+        }
+        if(e.getSource()==b1){
+            visor.setText(visor.getText()+1);
+        }
+        if(e.getSource()==b2){
+            visor.setText(visor.getText()+2);
+        }
+        if(e.getSource()==b3){
+            visor.setText(visor.getText()+3);
+        }
+        if(e.getSource()==b4){
+            visor.setText(visor.getText()+4);
+        }
+        if(e.getSource()==b5){
+            visor.setText(visor.getText()+5);
+        }
+        if(e.getSource()==b6){
+            visor.setText(visor.getText()+6);
+        }
+        if(e.getSource()==b7){
+            visor.setText(visor.getText()+7);
+        }
+        if(e.getSource()==b8){
+            visor.setText(visor.getText()+8);
+        }
+        if(e.getSource()==b9){
+            visor.setText(visor.getText()+9);
+        }
     }
     
     JButton b0 = new JButton("0");
@@ -29,6 +61,10 @@ public class JanelaCalculadora extends JFrame implements ActionListener{
     JButton b7 = new JButton("7");
     JButton b8 = new JButton("8");
     JButton b9 = new JButton("9");
+    
+    JButton bsoma = new JButton("+");
+    JButton bsub = new JButton("-");
+    JButton bmult = new JButton("x");
     
     JTextField visor = new JTextField("");
     
@@ -91,6 +127,20 @@ public class JanelaCalculadora extends JFrame implements ActionListener{
         b9.setBounds(410,240,100,60); //seta a posição do componente (x,y,largura,altura)
         add(b9); //adicionar o botão na janela
         b9.addActionListener(this);
+        
+        bsoma.setBounds(190,170,100,60); //seta a posição do componente (x,y,largura,altura)
+        add(bsoma); //adicionar o botão na janela
+        bsoma.addActionListener(this);
+        
+        bsub.setBounds(300,170,100,60); //seta a posição do componente (x,y,largura,altura)
+        add(bsub); //adicionar o botão na janela
+        bsub.addActionListener(this);
+        
+        bmult.setBounds(410,170,100,60); //seta a posição do componente (x,y,largura,altura)
+        add(bmult); //adicionar o botão na janela
+        bmult.addActionListener(this);
+        
+        
         
         //Criando caixa de Texto
         visor.setBounds(180,100,340,50);
