@@ -53,6 +53,38 @@ public class JanelaCalculadora extends JFrame implements ActionListener{
             visor.setText("");
             operacao = "soma";
         }
+        if(e.getSource()==bsub){
+            valor1 = Double.parseDouble(visor.getText());
+            visor.setText("");
+            operacao = "sub";
+        }
+        if(e.getSource()==bmult){
+            valor1 = Double.parseDouble(visor.getText());
+            visor.setText("");
+            operacao = "mult";
+        }
+        if(e.getSource()==bigual){
+            valor2 = Double.parseDouble(visor.getText());
+            Double resultado;
+            if(operacao=="soma"){
+                resultado = valor1 + valor2;
+                visor.setText(resultado.toString());
+            }
+            if(operacao=="sub"){
+                resultado = valor1 - valor2;
+                visor.setText(resultado.toString());
+            }
+            if(operacao=="mult"){
+                resultado = valor1 * valor2;
+                visor.setText(resultado.toString());
+            }
+        }
+        if(e.getSource()==bclear){
+            visor.setText("");
+            operacao = "";
+            valor1 = 0.0;
+            valor2 = 0.0;
+        }
 
     }
     
