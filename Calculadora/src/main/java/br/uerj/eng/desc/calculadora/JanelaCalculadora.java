@@ -9,6 +9,10 @@ import javax.swing.JTextField;
 
 public class JanelaCalculadora extends JFrame implements ActionListener{
     
+    String operacao;
+    Double valor1;
+    Double valor2;
+    
     @Override
     public void actionPerformed(ActionEvent e){
         if(e.getSource()==b0){
@@ -44,6 +48,12 @@ public class JanelaCalculadora extends JFrame implements ActionListener{
         if(e.getSource()==b9){
             visor.setText(visor.getText()+9);
         }
+        if(e.getSource()==bsoma){
+            valor1 = Double.parseDouble(visor.getText());
+            visor.setText("");
+            operacao = "soma";
+        }
+
     }
     
     JButton b0 = new JButton("0");
@@ -66,6 +76,8 @@ public class JanelaCalculadora extends JFrame implements ActionListener{
     JButton bsub = new JButton("-");
     JButton bmult = new JButton("x");
     
+    JButton bclear = new JButton("CE");
+    
     JTextField visor = new JTextField("");
     
     public JanelaCalculadora(){
@@ -80,65 +92,69 @@ public class JanelaCalculadora extends JFrame implements ActionListener{
         
         //Criando Botões
         setLayout(null); //informa que vamos fornecer as informações do layout
-        b0.setBounds(300,450,100,60); //seta a posição do componente (x,y,largura,altura)
+        b0.setBounds(245,450,100,60); //seta a posição do componente (x,y,largura,altura)
         add(b0); //adicionar o botão na janela
         b0.addActionListener(this);
         
-        bponto.setBounds(190,450,100,60); //seta a posição do componente (x,y,largura,altura)
+        bponto.setBounds(135,450,100,60); //seta a posição do componente (x,y,largura,altura)
         add(bponto); //adicionar o botão na janela
         bponto.addActionListener(this);
         
-        bigual.setBounds(410,450,100,60); //seta a posição do componente (x,y,largura,altura)
+        bigual.setBounds(355,450,100,60); //seta a posição do componente (x,y,largura,altura)
         add(bigual); //adicionar o botão na janela
         bigual.addActionListener(this);
         
-        b1.setBounds(190,380,100,60); //seta a posição do componente (x,y,largura,altura)
+        b1.setBounds(135,380,100,60); //seta a posição do componente (x,y,largura,altura)
         add(b1); //adicionar o botão na janela
         b1.addActionListener(this);
         
-        b2.setBounds(300,380,100,60); //seta a posição do componente (x,y,largura,altura)
+        b2.setBounds(245,380,100,60); //seta a posição do componente (x,y,largura,altura)
         add(b2); //adicionar o botão na janela
         b2.addActionListener(this);
         
-        b3.setBounds(410,380,100,60); //seta a posição do componente (x,y,largura,altura)
+        b3.setBounds(355,380,100,60); //seta a posição do componente (x,y,largura,altura)
         add(b3); //adicionar o botão na janela
         b3.addActionListener(this);
         
-        b4.setBounds(190,310,100,60); //seta a posição do componente (x,y,largura,altura)
+        b4.setBounds(135,310,100,60); //seta a posição do componente (x,y,largura,altura)
         add(b4); //adicionar o botão na janela
         b4.addActionListener(this);
         
-        b5.setBounds(300,310,100,60); //seta a posição do componente (x,y,largura,altura)
+        b5.setBounds(245,310,100,60); //seta a posição do componente (x,y,largura,altura)
         add(b5); //adicionar o botão na janela
         b5.addActionListener(this);
         
-        b6.setBounds(410,310,100,60); //seta a posição do componente (x,y,largura,altura)
+        b6.setBounds(355,310,100,60); //seta a posição do componente (x,y,largura,altura)
         add(b6); //adicionar o botão na janela
         b6.addActionListener(this);
         
-        b7.setBounds(190,240,100,60); //seta a posição do componente (x,y,largura,altura)
+        b7.setBounds(135,240,100,60); //seta a posição do componente (x,y,largura,altura)
         add(b7); //adicionar o botão na janela
         b7.addActionListener(this);
         
-        b8.setBounds(300,240,100,60); //seta a posição do componente (x,y,largura,altura)
+        b8.setBounds(245,240,100,60); //seta a posição do componente (x,y,largura,altura)
         add(b8); //adicionar o botão na janela
         b8.addActionListener(this);
         
-        b9.setBounds(410,240,100,60); //seta a posição do componente (x,y,largura,altura)
+        b9.setBounds(355,240,100,60); //seta a posição do componente (x,y,largura,altura)
         add(b9); //adicionar o botão na janela
         b9.addActionListener(this);
         
-        bsoma.setBounds(190,170,100,60); //seta a posição do componente (x,y,largura,altura)
+        bsoma.setBounds(465,450,100,60); //seta a posição do componente (x,y,largura,altura)
         add(bsoma); //adicionar o botão na janela
         bsoma.addActionListener(this);
         
-        bsub.setBounds(300,170,100,60); //seta a posição do componente (x,y,largura,altura)
+        bsub.setBounds(465,380,100,60); //seta a posição do componente (x,y,largura,altura)
         add(bsub); //adicionar o botão na janela
         bsub.addActionListener(this);
         
-        bmult.setBounds(410,170,100,60); //seta a posição do componente (x,y,largura,altura)
+        bmult.setBounds(465,310,100,60); //seta a posição do componente (x,y,largura,altura)
         add(bmult); //adicionar o botão na janela
         bmult.addActionListener(this);
+        
+        bclear.setBounds(465,240,100,60); //seta a posição do componente (x,y,largura,altura)
+        add(bclear); //adicionar o botão na janela
+        bclear.addActionListener(this);
         
         
         
