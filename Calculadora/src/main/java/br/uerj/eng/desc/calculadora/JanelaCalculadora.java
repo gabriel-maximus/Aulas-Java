@@ -4,8 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 public class JanelaCalculadora extends JFrame implements ActionListener{
     
@@ -49,34 +50,34 @@ public class JanelaCalculadora extends JFrame implements ActionListener{
             visor.setText(visor.getText()+9);
         }
         if(e.getSource()==bsoma){
-            valor1 = Double.parseDouble(visor.getText());
+            valor1 = Double.valueOf(visor.getText());
             visor.setText("");
             operacao = "soma";
         }
         if(e.getSource()==bsub){
-            valor1 = Double.parseDouble(visor.getText());
+            valor1 = Double.valueOf(visor.getText());
             visor.setText("");
             operacao = "sub";
         }
         if(e.getSource()==bmult){
-            valor1 = Double.parseDouble(visor.getText());
+            valor1 = Double.valueOf(visor.getText());
             visor.setText("");
             operacao = "mult";
         }
         if(e.getSource()==bigual){
-            valor2 = Double.parseDouble(visor.getText());
+            valor2 = Double.valueOf(visor.getText());
             Double resultado;
             if(operacao=="soma"){
                 resultado = valor1 + valor2;
-                visor.setText(resultado.toString());
+                visor.setText(String.format("%.3f",resultado));
             }
             if(operacao=="sub"){
                 resultado = valor1 - valor2;
-                visor.setText(resultado.toString());
+                visor.setText(String.format("%.3f",resultado));
             }
             if(operacao=="mult"){
                 resultado = valor1 * valor2;
-                visor.setText(resultado.toString());
+                visor.setText(String.format("%.3f",resultado));;
             }
         }
         if(e.getSource()==bclear){
@@ -112,6 +113,8 @@ public class JanelaCalculadora extends JFrame implements ActionListener{
     
     JTextField visor = new JTextField("");
     
+    JLabel titulo = new JLabel("CALCULAMAX");
+    
     public JanelaCalculadora(){
         
         //Criando Janela
@@ -132,9 +135,9 @@ public class JanelaCalculadora extends JFrame implements ActionListener{
         add(bponto); //adicionar o botão na janela
         bponto.addActionListener(this);
         
-        bigual.setBounds(355,450,100,60); //seta a posição do componente (x,y,largura,altura)
-        add(bigual); //adicionar o botão na janela
-        bigual.addActionListener(this);
+        bsoma.setBounds(355,450,100,60); //seta a posição do componente (x,y,largura,altura)
+        add(bsoma); //adicionar o botão na janela
+        bsoma.addActionListener(this);
         
         b1.setBounds(135,380,100,60); //seta a posição do componente (x,y,largura,altura)
         add(b1); //adicionar o botão na janela
@@ -172,9 +175,9 @@ public class JanelaCalculadora extends JFrame implements ActionListener{
         add(b9); //adicionar o botão na janela
         b9.addActionListener(this);
         
-        bsoma.setBounds(465,450,100,60); //seta a posição do componente (x,y,largura,altura)
-        add(bsoma); //adicionar o botão na janela
-        bsoma.addActionListener(this);
+        bigual.setBounds(465,450,100,60); //seta a posição do componente (x,y,largura,altura)
+        add(bigual); //adicionar o botão na janela
+        bigual.addActionListener(this);
         
         bsub.setBounds(465,380,100,60); //seta a posição do componente (x,y,largura,altura)
         add(bsub); //adicionar o botão na janela
@@ -188,11 +191,14 @@ public class JanelaCalculadora extends JFrame implements ActionListener{
         add(bclear); //adicionar o botão na janela
         bclear.addActionListener(this);
         
-        
-        
         //Criando caixa de Texto
-        visor.setBounds(180,100,340,50);
+        visor.setBounds(180,150,340,50);
+        visor.setHorizontalAlignment(SwingConstants.CENTER);
         add(visor);
         
+        //Criando Título
+        titulo.setBounds(180,90,340,50);//posicionar a label
+        titulo.setHorizontalAlignment(SwingConstants.CENTER); //centralizar o texto
+        add(titulo);
     }   
 }
