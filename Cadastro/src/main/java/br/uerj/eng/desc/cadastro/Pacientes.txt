@@ -1,0 +1,8 @@
+
+Nome: Paciente 1
+Matrícula: 1231232
+Idade: 10
+Endereço: Rua x
+Telefone: 21131231231
+Sintomas: Sintoma1, Sintoma2
+Doenças: Doença
